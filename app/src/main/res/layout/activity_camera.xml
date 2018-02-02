@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.husen.namasa_customcamera.CameraActivity">
+
+    <FrameLayout
+        android:id="@+id/cameraFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+    <RelativeLayout
+        android:alpha="0.7"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="144dp"
+        android:layout_alignParentBottom="true"
+        >
+
+        <Button
+            android:id="@+id/toGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="gallery"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="48dp"
+            />
+        <Button
+            android:id="@+id/cangkir"
+            android:text="Cangkir"
+            android:layout_margin="48dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
