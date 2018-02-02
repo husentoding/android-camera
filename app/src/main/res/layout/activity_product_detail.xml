@@ -8,15 +8,16 @@
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
+        app:navigationIcon="?attr/homeAsUpIndicator"
         android:layout_width="match_parent"
         android:background="@color/colorPrimary"
         android:layout_height="60dp">
         <LinearLayout
             android:layout_height="40dp"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:id="@+id/sliderDots"
             android:orientation="horizontal"
-            android:gravity="center_horizontal"></LinearLayout>
+            android:layout_gravity="center"></LinearLayout>
     </android.support.v7.widget.Toolbar>
     
     <android.support.v4.view.ViewPager
@@ -25,6 +26,94 @@
         android:layout_width="match_parent"
         android:layout_height="190dp">
     </android.support.v4.view.ViewPager>
+
+    <RelativeLayout
+
+        android:layout_below="@id/itemPic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <RelativeLayout
+            android:layout_marginTop="32dp"
+            android:id="@+id/rowSatu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginLeft="24dp"
+                android:src="@color/colorPrimaryDark"
+                android:id="@+id/imageSeller"
+                android:layout_width="48dp"
+                android:layout_marginRight="16dp"
+                android:layout_height="48dp" />
+            <TextView
+                android:layout_toRightOf="@id/imageSeller"
+                android:textColor="@color/colorblack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Judul Barang gan"
+                android:id="@+id/titleItem"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_below="@id/titleItem"
+                android:layout_toRightOf="@id/imageSeller"
+                android:text="Rp. 10.000"
+                android:id="@+id/priceItem"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:src="@color/colorAccent"
+                android:layout_width="32dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="36dp"
+                android:layout_alignParentRight="true"
+                />
+
+            <ImageView
+                android:id="@+id/iconView"
+                android:layout_width="12dp"
+                android:background="@color/colorAccent"
+                android:layout_toRightOf="@id/imageSeller"
+                android:layout_marginTop="12dp"
+                android:layout_below="@id/priceItem"
+                android:layout_height="7dp" />
+            <TextView
+                android:id="@+id/numView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iconView"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@id/priceItem"
+                android:text="24"
+                />
+            
+            <ImageView
+                android:layout_width="12dp"
+                android:background="@color/colorAccent"
+                android:layout_toRightOf="@id/numView"
+                android:layout_below="@id/priceItem"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="5dp"
+                android:layout_height="7dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@id/rowSatu"
+            android:id="@+id/rowDua"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+        </RelativeLayout>
+        
+
+
+    </RelativeLayout>
 
         
 

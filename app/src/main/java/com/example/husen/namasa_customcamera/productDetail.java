@@ -6,6 +6,7 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,6 +24,7 @@ public class productDetail extends AppCompatActivity {
     private int dots_num;
     private ImageView[] dots;
     private List<Integer> picImages= new ArrayList<>();
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,14 @@ public class productDetail extends AppCompatActivity {
 
         itemPic = (ViewPager) findViewById(R.id.itemPic);
         sliderDots = (LinearLayout) findViewById(R.id.sliderDots);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // back button pressed
+            }
+        });
 
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this, picImages);
         itemPic.setAdapter(viewPagerAdapter);
@@ -79,6 +89,7 @@ public class productDetail extends AppCompatActivity {
         });
 
     }
+
     public class ViewPagerAdapter extends PagerAdapter{
 
         private Context context;
